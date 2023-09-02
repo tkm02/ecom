@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import '../Panier.css'
+import ResumeCard from "./ResumeCard ";
+
 
 const Panier = () => {
   const initialProductData = [
@@ -17,6 +20,15 @@ const Panier = () => {
   ];
 
   const [products, setProducts] = useState(initialProductData);
+  const [subTotal, setSubTotal] = useState(0);
+
+  useEffect(() => {
+    let total = 0;
+    products.forEach((product) => {
+      total += product.price * product.quantity;
+    });
+    setSubTotal(total);
+  }, [products])
 
   const handleQuantityChange = (index, newQuantity) => {
     const newProducts = [...products];
@@ -31,56 +43,60 @@ const Panier = () => {
   };
 
   return (
-    <div className="table-container">
-
-      <table className="styled-table">
-        <thead>
-          <tr>
-            <th>Produits</th>
-            <th>Prix</th>
-            <th>Quantité</th>
-            <th>Total</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((product, index) => (
-            <tr key={index}>
-              <td className="product-cell">
-                <div className="product-info">
-                  <img src={product.imageSrc} alt={product.name} />
-                  <span>{product.name}</span>
-                </div>
-              </td>
-              <td>XOF {product.price}/kg</td>
-              <td className="quantity-btn">
-                <button
-                  onClick={() =>
-                    handleQuantityChange(index, product.quantity - 1)
-                  }
-                >
-                  -
-                </button>
-                <span>{product.quantity}</span>
-                <button
-                  onClick={() =>
-                    handleQuantityChange(index, product.quantity + 1)
-                  }
-                >
-                  +
-                </button>
-              </td>
-              <td>XOF {product.price * product.quantity}</td>
-              <td>
-                <button onClick={() => handleRemoveItem(index)}>X</button>
-              </td>
+    <div className="section-panier">
+      <div className="table-container">
+        <table className="styled-table">
+          <thead>
+            <tr>
+              <th>PRODUITS</th>
+              <th>PRIX</th>
+              <th>QUANTITE</th>
+              <th>TOTAL</th>
+              <th></th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <div className="div-update-btn">
-        <button className="update-button">Mise à jour du panier</button>
+          </thead>
+          <tbody>
+            {products.map((product, index) => (
+              <tr key={index}>
+                <td className="product-cell">
+                  <div className="product-info">
+                    <img src={product.imageSrc} alt={product.name} />
+                    <span>{product.name}</span>
+                  </div>
+                </td>
+                <td>XOF {product.price}/kg</td>
+                <td className="quantity-btn">
+                  <button
+                  className="btn-add"
+                    onClick={() =>
+                      handleQuantityChange(index, product.quantity - 1)
+                    }
+                  >
+                    -
+                  </button>
+                  <span>{product.quantity}</span>
+                  <button
+                  className="btn-add"
+                    onClick={() =>
+                      handleQuantityChange(index, product.quantity + 1)
+                    }
+                  >
+                    +
+                  </button>
+                </td>
+                <td>XOF {product.price * product.quantity}</td>
+                <td>
+                  <button onClick={() => handleRemoveItem(index)} className="btn-remove"><i className="fa fa-xmark"></i></button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div className="div-update-btn">
+          <button className="update-button">Mise à jour du panier</button>
+        </div>
       </div>
+      <ResumeCard subTotal={subTotal} />
     </div>
   );
 };

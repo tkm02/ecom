@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import '../ResumeCard.css'
+const ResumeCard = ({ subTotal }) => {
+  const priceLivraison = 0;
+  const [total, setTotal] = useState(0)
 
-const ResumeCard = ({ subTotal, shippingCost, total }) => {
+  useEffect(() => {
+    setTotal(priceLivraison + subTotal)
+  }, [subTotal])
+
   return (
     <div className="resume-card">
       <h2>Total Panier</h2>
@@ -10,7 +17,7 @@ const ResumeCard = ({ subTotal, shippingCost, total }) => {
       </div>
       <div className="summary-item">
         <span>Frais de livraison :</span>
-        <span>XOF {shippingCost}</span>
+        <span>XOF {priceLivraison}</span>
       </div>
       <div className="summary-item total">
         <span>Total :</span>

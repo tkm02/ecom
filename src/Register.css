@@ -1,0 +1,94 @@
+/* Ajoutez ces styles à votre fichier CSS */
+
+.form-container {
+    width: 70%;
+    margin: 60px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: -5px 1px 29px -18px rgba(0, 0, 0, 0.87);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-signup {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-column {
+    width: 48%;
+  }
+  
+  .form-signup h3 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-signup input,
+  .form-signup select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 5px 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .form-signup select {
+    background-color: #fff;
+  }
+  
+  .accept-terms {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .styled-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .checkbox-label {
+    width: 50%;
+    margin: 0 2px;
+  }
+  
+  .btn-signup {
+    background-color: #516E32;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 15px;
+    border: none;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+  }
+  
+  .btn-signup:hover {
+    background-color: #438026;
+  }
+  
+  .form-signup p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .form-signup a {
+    text-decoration: none;
+    color: #999999;
+    font-weight: bold;
+  }
+  

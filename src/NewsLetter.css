@@ -1,0 +1,69 @@
+.newsletter{
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    /* width: 85%; */
+  }
+  .texte-newsletter{
+    width: 35%;
+    margin: 0 10px 0 0;
+  }
+  .texte-newsletter h3, p{
+    margin: 0;
+    width: 90%;
+  }
+  
+  .form-mail{
+    /* border: 1px solid; */
+    width: 30%;
+    border-radius: 16px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-mail input{
+    width: 70%;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  .form-mail .submit{
+    border-radius: 15px;
+    width: 30%;
+    padding: 10px;
+    background-color: #516E32;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  .socials{
+    /* border: 1px solid; */
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .socials .social{
+    /* border: 1px solid; */
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .3s ease-in-out;
+    color: #999999;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .social:hover{
+    background-color: #516E32;
+    color: #fff;
+    border: 0;
+  }

@@ -1,4 +1,5 @@
 import React from "react";
+import '../Login.css'
 
 const Login = () => {
   return (
@@ -31,7 +32,7 @@ const Login = () => {
             Se connecter
           </button>
           <span>
-            Vous n'avez pas de compte ? <a href="/"> S'incrire </a>{" "}
+            Vous n'avez pas de compte ? <a href="/l"> S'incrire </a>{" "}
           </span>
         </form>
       </div>

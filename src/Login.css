@@ -1,0 +1,100 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    margin: 28px 0;
+  }
+  .bg-image{
+    width: 100%;
+    height: 100px;
+    background-image: url(../../fruits_et_legume.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .form-container{
+    /* border: 2px solid; */
+    width: 30%;
+    margin: 60px auto;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: -5px 1px 29px -18px rgba(0,0,0,0.87);
+  -webkit-box-shadow: -5px 1px 29px -18px rgba(0,0,0,0.87);
+  -moz-box-shadow: -5px 1px 29px -18px rgba(0,0,0,0.87);
+  }
+  .form-login{
+    display: flex;
+    flex-direction: column;
+  }
+  .form-login h3{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .form-login input{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 3px;
+    margin: 5px 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .remenber-user{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  .styled-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+  }
+  .checkbox-labe{
+    width: 50%;
+    margin: 0 2px;
+  }
+  .forgetmdp,a{
+    text-decoration: none;
+    color: #999999
+    ;
+  }
+  .btn-login{
+    background-color: #516E32;
+    color: #fff;
+    border-radius: 15px;
+    padding: 8px;
+    border: none;
+    margin: 5px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  .container-password{
+    /* border: 2px solid; */
+    position: relative;
+    margin: 10px 0;
+    display: flex;
+  }
+  .eye{
+    background-image: url(./../public/Icones/oeil-ouvrir.png);
+    position: absolute;
+    top: 25%;
+    right: 0;
+  }
+  .container-password #username{
+    width: 100%;
+    margin: 0;
+  }
+  .form-login span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px 0;
+  }
+  

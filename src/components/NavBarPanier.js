@@ -1,7 +1,8 @@
 import React from "react";
+import '../NavbarPanier.css'
 import '../Navbar.css'
 
-const Navbar = () => {
+const NavBarPanier = () => {
   const textLocation =
     "Station F 56 boulevard vincent Auriol, 75013 Paris France & Ivoire trade center,Abidjan Côte d'ivoire";
   return (
@@ -25,25 +26,15 @@ const Navbar = () => {
         </ul>
 
         <ul className="navbar-element">
-          <li className="logo">
+        <li>
+        <i className="fa-solid fa-chevron-left"></i>
+        </li>
+          <li className="logo-panier">
             <div className="logo-img"></div>
-            Mahoufarm
           </li>
-          <li className="search-bar">
-            <form>
-              <div className="ville-icon"></div>
-              <select className="ville">
-                <option value="Fr">Paris</option>
-                <option value="CI">Abidjan</option>
-              </select>
-              <div className="search-icon"></div>
-              <input type="text" placeholder="Chercher..." />
-              <button className="submit">Chercher</button>
-            </form>
-          </li>
+
           <li className="nav-icon">
             <div className="icons">
-              <div className="icon-acv"></div>
               <div className="icon-favoris"></div>
               <div className="icon-panier"></div>
             </div>
@@ -53,22 +44,9 @@ const Navbar = () => {
             </div>
           </li>
         </ul>
-
-        <ul className="options">
-          <select className="fruits">
-            <option value="">Fruits</option>
-            <option value="CI">banane</option>
-          </select>
-          <select className="legumes">
-            <option value="">Légumes</option>
-          </select>
-          <select className="feculents">
-            <option value="">Féculents</option>
-          </select>
-        </ul>
       </nav>
     </header>
   );
 };
 
-export default Navbar;
+export default NavBarPanier;

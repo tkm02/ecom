@@ -13,7 +13,7 @@ const CodePromo = () => {
   };
   const promoFormStyle = {
     width: "80%",
-    borderRadius: "16px",
+    borderRadius: "30px",
     backgroundColor: "#fff",
     display: "flex",
     justifyContent: "center",
@@ -24,13 +24,13 @@ const CodePromo = () => {
   const inputStyle = {
     width: "70%",
     backgroundColor: "transparent",
-    borderRadius: "15px",
+    borderRadius: "30px",
     border: "none",
     outline: "none",
   };
 
   const buttonStyle = {
-    borderRadius: "15px",
+    borderRadius: "30px",
     width: "30%",
     padding: "15px",
     backgroundColor: "#000",

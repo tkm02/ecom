@@ -2,18 +2,15 @@ import React from "react";
 import Panier from "./Panier";
 import Footer from "./Footer";
 import NewsLetter from "./NewsLetter";
-import Navbar from "./Navbar";
-import ResumeCard from "./ResumeCard ";
 import CodePromo from "./CodePromo";
+import NavBarPanier from "./NavBarPanier";
+
 const PanierPage = () => {
   return (
     <div>
-      <Navbar />
-      <h1 style={{textAlign:'center'}}>Mon panier</h1>
-      <div className="section-panier">
-        <Panier />
-        <ResumeCard />
-      </div>
+      <NavBarPanier />
+      <h1 style={{ textAlign: "center" }}>Mon panier</h1>
+      <Panier />
       <CodePromo />
       <NewsLetter />
       <Footer />
